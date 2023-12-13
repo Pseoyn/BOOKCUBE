@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+// -교보손글씨 2022 김혜남
+@font-face {
+    font-family: 'iceJaram-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// -에스코어드림
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+$orange :rgb(255, 128, 59);
+
+
+/*header*/
+header {
+    width: 100%;
+}
+
+.menu {
+        // menu 1
+        &1 {
+            width: 100%;
+            border-bottom: 3px solid $orange;
+            @include flex(center,normal);
+        }
+
+        // menu 2
+        &2 {
+            width: 100%;
+            height: 80px;
+            @include flex(center,center);
+        }
+    }
+
+   
+    .menu_sub {
+            // menu sub1 
+            &1 {
+                    font-family: 'S-CoreDream-3Light';
+                    width: 100%;
+                    @include flex(space-around, center);
+                    background-color:$orange;
+            
+                    >p {
+                        line-height: 50px;
+                        letter-spacing: 3px;
+                        font-size: 15px;
+                    }
+            
+                    >p:hover {
+                        cursor: default;
+                    }
+            
+                    > #login {
+                        @include flex(normal, center);
+                        padding: 15px;
+            
+                        span {
+                            padding: 0px 10px;
+                            font-size: 13px;
+                            transition: all 0.2s;
+                        }
+
+                        .sub1:hover {
+                            color: white;
+                        }
+            
+                        span:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    #sub_iconbox {
+                        height: 60px;
+                        margin-right: 100px;
+                        @include flex(normal, normal);
+                        > img {
+                            width: 30px;
+                            height: 30px;
+                            margin: 10px 10px 10px 0px;
+                            transition: all 0.5s ease-out;
+                            box-shadow: 5px 5px 0px 0px white;
+                            border-radius: 20px;
+                            transition: all 0.3s;
+                        }
+                        > img:hover {
+                            cursor: pointer;
+                            transform: scale(1.1);
+                            box-shadow: 0px 0px 0px 0px white;
+                        }
+                    }
+                }
+            
+            
+            // menu sub2
+            &2 {
+                z-index: 10;
+                font-family: 'S-CoreDream-3Light';
+                width: 1300px;
+                @include flex(space-between,normal);
+                
+                #logo{
+                    width: 200px;
+                    height: 60px;
+                    @include flex(normal,center);
+                    padding-left: 20px;
+                }
+
+                > ul {
+                    @include flex(normal,center);
+                    margin: 0px 15px;
+                    position:relative;
+                    > .menu_li > h4 {
+                        transition: all 0.2s;
+                    }
+                    > .menu_li > h4:hover {
+                        color: $orange;
+                        cursor: pointer;
+                        margin-bottom: 5px;
+                    }
+                    > li{
+                        float: left;
+                        padding: 5px 10px;
+
+                        > img[alt="search"] {
+                            width: 43px;
+                            height: 43px;
+                            padding-top: 3px;
+                            margin-right: -13px;
+                        }
+
+                        > img[alt="shopping"] {
+                            width: 45px;
+                            height: 50px;
+                            padding-left: 5px;
+                        }
+
+                        //전체 카테고리
+                        > #menu_ul{
+                            width: 470px;
+                            height: 410px;
+                            background-color: white;
+                            border-radius: 10px;
+                            border: 1px solid $orange;
+                            margin: 20px 0 0 0;
+                            padding: 30px;
+                            display:none;
+                            position:absolute;
+                            transform: translate(-10px, 9px);
+                            
+                            > li{
+                                margin: 10px 0 10px 0;
+                                padding: 10px;
+                                font-size: 18px;
+                                
+                                > ul{
+                                    @include flex(normal, normal);
+                                    flex-direction: row;
+                                    padding-top: 20px;
+                                    padding-left: 12px;
+                                    > li{
+                                        font-size: 16px;
+                                        border-radius: 10px;
+                                        transition: all 0.5s;
+                                        margin-left: 10px;
+                                        padding: 5px;
+                                    }
+                                    li:hover{
+                                        background-color: $orange;
+                                        cursor: pointer;
+                                        box-shadow: 0px 0px 15px 0px $orange;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+
+
+
+/*footer*/
+footer {
+    font-family: 'S-CoreDream-3Light';
+    width: 100%;
+    @include flex(normal,normal);
+    margin: 0 auto;
+    background-color: $orange;
+}
+
+.footer_sub{
+    &1 {
+        width: 70%;
+        height: 220px;
+        padding: 30px 15px 0px 0px;
+        background-color: white;
+        img{
+            width: 200px;
+            margin-left: 270px;
+        }
+    }
+    &2 {
+        width: 100%;
+        font-size: 14px;
+        @include flex(center,normal);
+        ul {
+            width: 200px;
+            margin-top: 25px;
+            li{
+                padding: 5px 0;
+            }
+            li:hover {
+                cursor:pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    &3 {
+        width: 100%;
+        padding: 50px 0px 0px 0px;
+        p{
+            font-size: 12px;
+        }
+    }
+    &3:hover {
+        cursor: default;
+    }
+}

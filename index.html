@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookcube</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src ="js/section.js"></script>
+    <script src = "js/reader.js"></script>
+    <link rel="icon" href="index_img/title_img.jpg">
+    <!-- <a href="https://www.flaticon.com/free-icons/shopping-bag" title="shopping bag icons">
+        Shopping bag icons created by CreativeCons - Flaticon</a> -->
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <div class="menu1">
+                <div class = "menu_sub1">
+                    <!-- 페이스북, 인스타, 트위터, 유튜브 -->
+                    <div id="sub_iconbox">
+                        <img src="index_img/facebook.png" alt="">
+                        <img src="index_img/instagram.png" alt="">
+                        <img src="index_img/twitter.png" alt="">
+                        <img src="index_img/youtube.png" alt="">
+                    </div>
+
+                    <div id = "login">
+                        <span class = "sub1">로그인 및 회원가입</span>
+                        <span>|</span>
+                        <span class = "sub1">충전</span>
+                        <span>|</span>
+                        <span class = "sub1">문의 / 고객센터</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "menu2">
+                <div class = "menu_sub2">
+
+                    <div id="logo">
+                        <img src="index_img/bookcube_logo.png" alt="">
+                    </div>
+
+                    <ul>
+                        <!-- menu_mouse, menu_li : j-query -->
+                        <li id = "menu_mouse" class = "menu_li"><h4>전체 카테고리</h4>
+                            
+                            <ul id = menu_ul>
+                                <li>&#183; 장르도서
+                                    <ul>
+                                        <li>로맨스</li>
+                                        <li>무협/판타지</li>
+                                        <li>만화</li>
+                                    </ul>
+                                </li>
+                                <li></li>
+
+                                <li>&#183; 일반도서
+                                    <ul >
+                                        <li>오디오북</li>
+                                        <li>역사/문화</li>
+                                        <li>건강/스포츠/취미</li>
+                                        <li>어린이</li>
+                                        <li>잡지</li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>문학</li>
+                                        <li>인문</li>
+                                        <li>종교</li>
+                                        <li>청소년</li>
+                                        <li>성인</li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>자기계발</li>
+                                        <li>사회</li>
+                                        <li>여행</li>
+                                        <li>예술/대충문화</li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>외국어/언어</li>
+                                        <li>자연과 과학</li>
+                                        <li>유아</li>
+                                        <li>해외원서</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </li>             
+                        <li class = "menu_li"><h4>서점</h4></li>
+                        <li class = "menu_li"><h4>웹소설</h4></li>
+                        <li class = "menu_li"><h4>웹툰</h4></li>
+                        <li class = "menu_li"><h4>신간</h4></li>
+                        <li class = "menu_li"><h4>무료</h4></li>
+                        <li class = "menu_li"><h4>이벤트</h4></li>
+                        <li>|</li>                    
+                        <li><img src="index_img/search.png" alt="search"></li>
+                        <li><img src="index_img/shopping-bag.png" alt="shopping"></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- slider -->
+        <div id="slider_all">
+            <div id="slider">
+                <div class = "slide_video">
+                    <video src = "index_img/지구.mp4" autoplay loop muted>
+                </div>
+                <div class = "slide_text">
+                    <h3>"상상력이 지식보다 중요하다. 지식은 한계가 있지만, 상상력은 세상을 품고도 남는다."</h3>
+                    <p> - 아인슈타인 -</p>
+                </div>
+
+                <div class = "slide_video">
+                    <video src="index_img/도로.mp4" autoplay loop muted>
+                </div>
+                <div class = "slide_text">
+                    <h3>"책을 읽는다는 것은 자신의 미래를 만든다는 것과 같은 뜻이다."</h3>
+                    <p>- 랄프 월도 에머슨 -</p>
+                </div>
+
+                <div class = "slide_video">
+                    <video src="index_img/가을.mp4" autoplay loop muted>
+                </div>
+                <div class = "slide_text">
+                    <h3>긴 하루 끝에 좋은 책이 기다리고 있다는 생각만으로 그날은 더 행복해진다.</h3>
+                    <p>- 캐슬린 노리스 -</p>
+                </div>
+            </div>
+
+            <div id="control">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        
+            <!-- 신간,베스트,방학,시간,무료 -->
+            <div id = "section">
+                <div id="section_textbox">
+                    <span></span>
+                    <h3>더 보기 +</h3>
+                    <ul id = "ul">                    
+                        <li><h2>신간</h2></li>
+                        <li><h2>베스트</h2></li>
+                        <li><h2>학기 시작!</h2></li>
+                        <li><h2>시간 순삭!</h2></li>
+                        <li><h2>무료</h2></li>
+                    </ul>
+                </div>
+            </div>
+        <!-- 추천 -->
+      
+        <div id = "point_box">
+            <img src="index_img/full-stop.png" alt="">
+            <img src="index_img/full-stop.png" alt="">
+            <img src="index_img/full-stop.png" alt="">
+        </div>
+
+        <div id = "brand_wrap">
+            <div id="brand_textbox">
+                <h2>편리하게 이용하고 혜택받으세요!</h2>
+            </div>
+            <div id="brand">
+
+                <div class="brand_all">
+
+                    <div class="brand_boxText">
+                        <h2>&#60;&nbsp;최대 50% SALE&nbsp;&#62;</h2>
+                        <p>&#8226;초득가 대여관, 파격가에 만나보실 수 있어요!</p>
+                    </div>
+
+                    <div class="brand_boxImg">
+                        <img src="index_img/쿠폰.png" alt="">
+                    </div>
+
+                    <div class = "brand_buttonBox buttonR">
+                        <button>
+                            <h4>대여관 <br> 바로가기</h4>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="brand_all">
+                    
+                    <div class="brand_boxText">
+                        <h2>&#60;&nbsp;전문서적관&nbsp;&#62;</h2>
+                        <p>&#8226;무거운 전문서적, 전자책으로 가볍고 편리하게 보세요!</p>
+                    </div>
+                    
+                    <div class="brand_boxImg brand_boxR">
+                        <img src="index_img/책들.png" alt="">
+                    </div>
+
+                    <div class = "brand_buttonBox">
+                        <button>
+                            <h4>전문서적관 <br> 바로가기</h4>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="brand_all">
+                    
+                    <div class="brand_boxText">
+                        <h2>&#60;&nbsp;오디오북&nbsp;&#62;</h2>
+                        <p>&#8226;귀로 듣는 즐거움, 멋진 성우분들을 모셔 생동감 있는 감상이 가능해요!</p>
+                    </div>
+                    
+                    <div class="brand_boxImg">
+                        <img src="index_img/듣기.png" alt="">
+                    </div>
+                    
+                    <div class = "brand_buttonBox buttonR">
+                        <button>
+                            <h4>오디오북 <br> 보러가기</h4>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="brand_all">
+                    
+                    <div class="brand_boxText">
+                        <h2>&#60;&nbsp;이벤트&nbsp;&#62;</h2>
+                        <p>&#8226;다양한 혜택 가득, 회원분들을 위해 준비했어요 !</p>
+                    </div>
+                    
+                    <div class="brand_boxImg brand_boxR">
+                        <img src="index_img/선물.png" alt="">
+                    </div>
+
+                    <div id = "arrow_img">
+                       <img src="index_img/down-arrow.png" alt = "">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="event">
+            <h2>진행중인 이벤트</h2>
+            <span>! 자세한 내용은 이벤트 클릭 !</span>
+            <div id = "event_all">
+                <div class="event_box">
+                        <img src="index_img/event1.jpg" alt="">
+                </div>
+        
+                <div class="event_box">
+                        <img src="index_img/event2.jpg" alt="">
+                </div>
+                
+                <div class="event_box">
+                        <img src="index_img/event3.jpg" alt="">
+                </div>
+
+                <div class="event_box">
+                        <img src="index_img/event4.jpg" alt="">
+                </div>
+
+                <div class="event_box">
+                        <img src="index_img/event5.jpg" alt="">
+                </div>
+
+
+                <div class="event_box">
+                        <img src="index_img/event6.jpg" alt="">
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id = "readers">
+            <h2> 독자분들이 픽한 도서 </h2>
+        </div>
+
+          <div id = "email">
+            <h1>원하시는 책이 없으신가요?</h1>
+            <p>편지를 통해 저희에게 알려주시면 10일 후 찾아보실 수가 있어요!</p>
+            <div>
+                <input type="text" placeholder="책 제목을 알려주세요!" >
+            </div>
+            <button><i class="fa-regular fa-paper-plane"></i></button>
+        </div>
+
+
+        <div id = "section_end">
+            <div id = "t_end">
+                <h2>테마관</h2>
+                <span>테마관 더 보러가기 +</span>
+                <div class = "t_all">
+                    <div class = "t_img">
+                        <img src="index_img/t_img1.png" alt="">
+                    </div>
+                    
+                    <div class = "t_text">
+                        <h3>&bull;문학 베스트 셀러 추천도서</h3>
+                        <p>맛있는 독서 즐기기, 한국 문학은 진리다! <br> 
+                            언제 어디서 읽어도 좋은 국내 명작을 소개합니다.</p>
+                    </div>
+                </div>
+
+                <div class = "t_all">
+                    <div class = "t_img">
+                        <img src="index_img/t_img2.png" alt="">
+                    </div>
+                    
+                    <div class = "t_text">
+                        <h3>&bull;북큐브 MD 추천 인문교양</h3>
+                        <p>지식의 힘, 인문 교양 고서 추천 테마관! <br> 
+                            오늘을 살아가는 분들에게 자신있게 추천합니다!</p>
+                    </div>
+                </div>
+
+                <div class = "t_all">
+                    <div class = "t_img">
+                        <img src="index_img/t_img3.jpg" alt="">
+                    </div>
+                    
+                    <div class = "t_text">
+                        <h3>&bull;내 손안의 매거진</h3>
+                        <p>달마다 새로운 취향 발견! <br> 
+                            매일매일 골라 보는 내 손 안의 매거진!</p>
+                    </div>
+                </div>
+
+                <div class = "t_all">
+                    <div class = "t_img">
+                        <img src="index_img/t_img4.png" alt="">
+                    </div>
+                    
+                    <div class = "t_text">
+                        <h3>&bull;베스트 영화 원작 소설 모음전</h3>
+                        <p>영화만 보고 끝날텐가? <br> 
+                            영화의 감동을 책으로 한 번 더 느껴보세요.</p>
+                    </div>
+                </div>
+
+                <div class = "t_all">
+                    <div class = "t_img">
+                        <img src="index_img/t_img5.png" alt="">
+                    </div>
+                    
+                    <div class = "t_text">
+                        <h3>&bull;유아동 청소년을 위한 추천도서 모음전</h3>
+                        <p>책을 함께 읽는 것이 최고의 교육입니다. <br> 
+                            전자책으로 즐거운 독서경험을 선사해주세요.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="b_end">
+                <h2>브랜드관</h2>
+                <span> 브랜드관 더 보러가기 +</span>
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img1.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;자음과 모음</h3>
+                        <p>세상에 존재하는 글과 소리를 모은다</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img2.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;열린책들</h3>
+                        <p>창조적이고 개방적인 사고가 담긴 책</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img3.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;김영사</h3>
+                        <p>세상에 꼭 필요하고 유익한 책을 만드는 출판사</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img4.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;베가북스</h3>
+                        <p>당신의 마음을 빛나게 할 책을 만드는 출판사</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img5.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;21세기북스</h3>
+                        <p>경제&#183; 경영&#183; 자기계발 분야의 독보적인 브랜드</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img6.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;인플루엔셜</h3>
+                        <p>훌륭한 작품만이 세상을 바꾼다</p>
+                    </div>
+                </div>
+
+                <div class = "b_all">
+                    <div class = "b_img">
+                        <img src="index_img/b_img7.jpg" alt="">
+                    </div>
+
+                    <div class = "b_text">
+                        <h3>&bull;arte(아르테)</h3>
+                        <p>국내외 우수 문학 작품들의 새로운 가치 창조</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <!-- footer -->
+        <footer>
+            <div class="footer_sub1">
+                <img src="index_img/bookcube_logo.png" alt="">
+            </div>
+        
+                <div class="footer_sub2">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>청소년보호정책</li>
+                        <li>사업자정보확인</li>
+                        <li>작가/출판사 전용메뉴</li>
+                        <li>공지사항</li>
+                    </ul>
+
+                    <ul>
+                        <li>전자도서관</li>
+                        <li>앱 다운로드</li>
+                    </ul>
+        
+        
+                    <ul>
+                        <li>Google</li>
+                        <li>App store</li>
+                        <li>소득공제 사업자</li>
+                    </ul>
+        
+        
+                </div>
+        
+                <div class="footer_sub3">
+                    <p>
+                        상호 : 주식회사 북큐브네트웍스 | 대표이사 : 유철종 <br>  주소 : 서울 구로구 디지털로 33길 27, 삼성IT밸리 905~907호 <br> 사업자 등록번호 : 113-86-24199 |
+                        통신판매업 신고번호 : 제 2008-서울구로-0747호 <br> 개인정보 관리 책임자 : 남지원 <br>도서비 소득공제 대상 사업자 인증번호 : 312018060044 <br> E-mail :
+                        webmaster@bookcube.com | 전화 1588-1925
+                    </p>
+                    <br>
+                    <p>Copyright © BOOKCUBENETWORKS Co.,Ltd. All Rights Reserved</p>
+                </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

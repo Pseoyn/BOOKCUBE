@@ -1,0 +1,641 @@
+@charset "utf-8";
+
+@import "reset", "common";
+
+@mixin flex ($j, $a, $d) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $d;
+}
+
+#wrap {
+    @include flex (normal, center, column);
+    width: 100%;
+    margin: 0 auto;
+}
+
+#main_book {
+    width: 1200px;
+    margin-top: 0px;
+
+    // position: relative;
+    #main_ul {
+        @include flex (center, normal, row);
+        width: 100%;
+        border-top: 1px solid $orange;
+        font-family: 'S-CoreDream-3Light';
+        margin-left: 30px;
+
+        >ul {
+            @include flex (normal, normal, row);
+            width: 1200px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-left: 70px;
+            font-size: 13px;
+        }
+    }
+
+
+    #main_all {
+        @include flex (center, normal, row);
+        width: 1200px;
+
+        #main_imgbox {
+            padding-right: 20px;
+            padding-top: 25px;
+            >img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        #main_text {
+            &1 {
+                @include flex (space-around, center, row);
+                width: 550px;
+                height: 200px;
+
+                #hs_box {
+                    font-family: 'S-CoreDream-3Light';
+                    padding-left: 40px;
+
+                    >h2 {
+                        font-size: 25px;
+                        margin-bottom: 20px;
+                    }
+
+                    >h5 {
+                        width: 265px;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+
+                    >span {
+                        font-size: 14px;
+                    }
+
+                    ;
+                }
+
+                #i_box {
+                    width: 400px;
+                    text-align: center;
+
+                    >i {
+                        font-size: 25px;
+                        color: $orange;
+                    }
+
+                    >p {
+                        font-family: 'S-CoreDream-3Light';
+                        font-size: 13px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            &2 {
+                @include flex (normal, center, row);
+                width: 510px;
+                height: 80px;
+                padding-left: 40px;
+                font-family: 'S-CoreDream-3Light';
+
+                >h4 {
+                    margin-right: 10px;
+                    font-size: 15px;
+                    color: $orange;
+                }
+
+                >h3 {
+                    margin-right: 5px;
+                    font-size: 21px;
+                }
+
+                >span {
+                    font-size: 12px;
+                    margin-top: 5px;
+                    text-decoration: line-through;
+                    color: $orange;
+                }
+
+                >button {
+                    margin-left: 190px;
+                    border: none;
+                    background-color: transparent;
+                    border: 1px solid black;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    transition: 0.2s;
+                    &:hover {
+                        cursor: pointer;
+                        color: $orange;
+                        border: 1px solid $orange;
+                    }
+                }
+            }
+
+            &3 {
+                @include flex (space-around, center, row);
+                width: 550px;
+                height: 50px;
+                font-size: 20px;
+
+                >h5:nth-of-type(1) {
+                    padding-right: 255px;
+                }
+                > h5:nth-of-type(2){
+                    color: $orange;
+                }
+            }
+
+            &4 {
+                @include flex (space-between, center, row);
+                width: 550px;
+                height: 160px;
+                font-family: 'S-CoreDream-3Light';
+                margin-top: 20px;
+                margin-bottom: 20px;
+                // border: 1px solid $orange;
+
+                >h5 {
+                    padding-left: 50px;
+                    font-size: 18px;
+                }
+
+                >#h5_box {
+                    padding-right: 40px;
+                    font-size: 20px;
+                    text-align: right;
+
+                    >div {
+                        @include flex (space-between, center, row);
+                        padding-top: 10px;
+
+                        >p {
+                            font-size: 15px;
+                            padding-right: 10px;
+                        }
+
+                        >button {
+                            border: 1px solid black;
+                            padding: 5px 10px;
+                            background-color: transparent;
+                            &:hover {
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    >h5 {
+                        padding-top: 10px;
+                        color: $orange;
+                    }
+
+                    >button {
+                        border: 1px solid black;
+                        padding: 5px 10px;
+                        margin-top: 10px;
+                        background-color: transparent;
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            &5 {
+                @include flex (normal, center, row);
+                width: 550px;
+                height: 120px;
+                font-family: 'S-CoreDream-3Light';
+
+                #text5_box1 {
+                    @include flex (normal, center, column);
+                    padding-left: 40px;
+
+                    >h3 {
+                        font-size: 15px;
+                        margin-right: 30px;
+                    }
+
+                    >div {
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        padding: 0px 10px;
+
+                        >label:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .price_value {
+                        width: 55px;
+                        text-align: center;
+                        padding: 10px 0px;
+                        border: none;
+                        background-color: transparent;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                #text5_box2 {
+                    @include flex (normal, center, row);
+                    margin-left: 140px;
+                    .price_sub {
+                        margin-right: 20px;
+                    }
+
+                    >h3 {
+                        padding-right: 20px;
+                        font-size: 18px;
+                    }
+
+                    >span {
+                        font-size: 23px;
+                    }
+                }
+            }
+
+            &6 {
+                @include flex (center, center, row);
+                width: 550px;
+                height: 90px;
+                font-family: 'S-CoreDream-3Light';
+
+                >span {
+                    width: 210px;
+                    font-size: 20px;
+                    border: 1px solid $orange;
+                    padding: 8px 20px;
+                    text-align: center;
+                }
+
+                >span:nth-of-type(2) {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+}
+.swiper {
+    width: 1200px;
+    height: 400px;
+    border-radius: 20px;
+    position:relative;
+    // overflow: hidden;
+    font-family: 'S-CoreDream-3Light';
+    margin-top: 90px;
+    padding-top: 20px;
+    
+    > h4 {
+        padding-top: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        padding-bottom: 20px;
+
+    }
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        width: 170%;
+        padding: 0 20px;
+             
+        .swiper-slide {
+            padding: 0 10px;
+            > h3 {
+                text-align: left;
+                width: 140px;
+                font-size: 16px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            > img {
+                width: 90%;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                border: 1px solid $orange;
+                padding: 5px;
+            }
+        }
+    }
+}
+#sub_section {
+    width: 1250px;
+
+    #sub_sectionBox {
+        > img {
+            margin-top: 70px;
+            border-radius: 20px;
+        }
+        #intro {
+            
+            font-family: 'S-CoreDream-3Light';
+            width: 800px;
+            margin-top: 90px;
+            padding-bottom: 75px;
+            border-bottom: 1px solid $orange;
+
+            > h4 {
+                font-size: 20px;
+            }
+
+            > h5 {
+                font-size: 15px;
+                padding: 20px
+            }
+
+            > p {
+                font-size: 14px;
+                line-height: 23px;
+                padding-bottom: 15px;
+                padding: 0 20px;
+                text-align: justify;
+                color: rgb(100, 100, 100);
+            }
+
+        }
+
+        #for {
+            font-family: 'S-CoreDream-3Light';
+            width: 800px;
+            padding-bottom: 75px;
+            border-bottom: 1px solid $orange;
+            
+
+            >h4 {
+                font-size: 20px;
+                margin-top: 90px;
+            }
+
+            #for_box {
+                border-radius: 20px;
+                padding: 20px;
+                transition: 0.5s;
+                
+                > span {
+                    background-color: white;
+                    padding: 8px 15px;
+                    border-radius: 20px;
+                }
+
+                > p {
+                    margin-top: 20px;
+                    line-height: 23px;
+                    font-size: 14px;
+                    text-align: justify;
+                    color: rgb(100, 100, 100);
+                }
+
+                #for_subbox {
+                    @include flex (space-between, normal, row);
+
+                    >span {
+                        margin-bottom: 10px;
+                    }
+
+                    >button {
+                        background-color: transparent;
+                        border: none;
+                        margin-right: 10px;
+                        margin-bottom: 5px;
+                    }
+
+                    div {
+                        padding-bottom: 20px;
+
+                        >span {
+                            font-size: 15px;
+                            padding-right: 15px;
+                            line-height: 30px;
+                        }
+
+                        >h3 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sub_ul {
+        font-family: 'S-CoreDream-3Light';
+        > h4 {
+            font-size: 20px;
+            padding-bottom: 20px;
+            margin-top: 75px;
+        }
+        > #m_ul {
+            padding: 0 20px;
+            > li {
+                margin-bottom: 5px;
+                font-size: 14px;
+                color: rgb(100, 100, 100);
+            }
+        }
+    }
+    #sub_box {
+        width: 300px;
+        height: 500px;
+        // border: 1px solid $orange;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgb(255, 175, 151);
+        left: 62%;
+        top: 159%;
+        position: absolute;
+        font-family: 'S-CoreDream-3Light';
+        > #sub_all {
+            @include flex (normal, normal, row);
+            > #sub_1 {
+                    margin-left: 15px;
+                    margin-top: 20px;
+                    width: 100px;
+                > h4 {
+                    width: 140px;
+                    text-align: center;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                > img {
+                    width: 150px;
+                    height: 210px;
+                    border-radius: 20px;
+                    padding: 5px;
+                    border: 1px solid $orange;
+                }
+            }
+
+            #sub_2 {
+                margin-left: 80px;
+                margin-top: 30px;
+                > div {
+                    margin-top: 30px;
+                    font-size: 14px;
+                    > div {
+                        width: 60px;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        text-align: center;
+                        padding: 0px 5px;
+                        > input {
+                            width: 30px;
+                            text-align: center;
+                            padding: 5px 0px;
+                            border: none;
+                            background-color: transparent;
+
+                             &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                    > h3 {
+                        margin-bottom: 10px;
+                    }
+                }
+                #sub_3 {
+                    border-top: 1px solid black;
+                    padding-top: 20px;
+                    @include flex (normal, normal, column);
+                    position: absolute;
+                    > span {
+                        border: 1px solid black;
+                        text-align: center;
+                        padding: 5px 10px;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                        transition: 0.5s;
+                        &:hover {
+                            cursor: pointer;
+                            transform: translateX(5px);
+                        }
+                        
+                    }
+                }
+            }
+        }    
+        > #sub_ul{
+            margin-top: 20px;
+            margin-left: 30px;
+            font-size: 15px;
+            > ul {
+                > li {
+                    width: 120px;
+                    padding-bottom: 5px;
+                    transition: 0.5s;
+                    &:hover {
+                        cursor: pointer;
+                        transform: translateX(5px);
+                        // color: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    #sub_box.on {
+        position: fixed;
+        top: 50px;
+    }
+    
+    #book_in{
+        padding-top: 75px;
+        border-top: 1px solid $orange;
+        width: 800px;
+        height: 1200px;
+        margin-top: 90px;
+        font-family: 'S-CoreDream-3Light';
+        border-bottom: 1px solid $orange;
+        
+        > h4 {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+        #sub_in {
+            padding: 0 20px;
+            font-size: 14px;
+            > p {
+                line-height: 23px;
+                text-align: justify;
+                color: rgb(100, 100, 100);
+                
+            }
+        }
+    }
+
+    #company{
+        margin-top: 75px;
+        border-bottom: 1px solid $orange;
+        > h4 {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+        width: 800px;
+        height: 800px;
+        font-family: 'S-CoreDream-3Light';
+        #sub_company{
+            padding: 0 20px;
+            > p {
+                text-align: justify;
+                font-size: 14px;
+                line-height: 23px;
+                color: rgb(100, 100, 100);
+            }
+        }
+    }
+
+    #basics {
+        width: 800px;
+        font-family: 'S-CoreDream-3Light';
+        margin-top: 75px;
+        border-bottom: 1px solid $orange;
+        padding-left: 20px;
+        padding-bottom: 70px;
+        > h4 {
+            font-size: 20px;
+        }
+        > table {
+            padding-top: 20px;
+            padding-left: 20px;
+            color: rgb(100, 100, 100);
+            tr {
+                th {
+                    width: 150px;
+                    height: 30px;
+                    text-align: left; 
+                }
+            }
+        }
+    }
+
+    #review {
+        width: 800px;
+        font-family: 'S-CoreDream-3Light';
+        margin-top: 75px;
+        border-bottom: 1px solid $orange;
+        padding-left: 20px;
+        padding-bottom: 70px;
+        > ul {
+            @include flex (space-between, normal, row);
+        }
+
+        > span {
+            display: block;
+            width: 800px;
+            height: 200px;
+            text-align: center;
+            background-color: $orange;
+            line-height: 200px;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+}   
